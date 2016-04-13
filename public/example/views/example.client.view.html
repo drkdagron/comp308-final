@@ -1,0 +1,36 @@
+<section ng-controller="ExampleController">
+
+    <div>
+        <div data-ng-show="authentication.user">
+            <h1> Hello <span data-ng-bind="authentication.user.fullName"></span></h1>
+        </div>
+        <div data-ng-show="!authentication.user">
+            <h1 style="font-size:30px;">Please sign in/sign up to begin!</h1>
+        </div>
+    </div>
+        
+    <div data-ng-show="authentication.user.type == 'Student'">
+        <div class="container-fluid">
+            <div class="rows">
+                <div class="col-md-4">
+                    <a data-ng-href="/#!/courses"><button class="btn btn-primary btn-block"  style="margin-bottom:10px" >View Courses Offered</button></a>
+                    <a data-ng-href="/#!/enrolled"><button class="btn btn-primary btn-block"  style="margin-bottom:10px">View Courses</button></a>
+                    <button class="btn btn-primary btn-block" href="#" style="margin-bottom:10px">View Transcript</button>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-ng-show="authentication.user.type == 'Staff'">
+        <div class="container-fluid">
+            <div class="rows">
+                <div class="col-md-4">
+                    <a href="/#!/courses/create"><button class="btn btn-primary btn-block"  style="margin-bottom:10px">Create Course</button></a>
+                    <a class="btn btn-primary btn-block" href="/#!/courses" style="margin-bottom:10px">List Courses</a>
+                </div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </div>
+</section>

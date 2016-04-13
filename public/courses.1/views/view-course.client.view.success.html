@@ -1,0 +1,19 @@
+<section data-ng-controller="CourseController" data-ng-init="findOne()">
+    <div class="container">
+    <h3 class="alert alert-success"><strong>Course created!</strong></h3>
+        <div style="margin-left:40px">
+            <h2>Course Name: <strong data-ng-bind="course.name"></strong></h2>
+            <h2>Course Code: <strong data-ng-bind="course.code"></strong></h2>
+            <h2>Description: <strong data-ng-bind="course.description"></strong></h2>
+            <h2>Course Capacity: <strong data-ng-bind="course.capacity"></strong></h2>
+        </div>
+    </ul>
+    </div>
+   
+    <small>
+        <em>Created on</em>
+        <em data-ng-bind="course.created | date:'mediumDate'"></em>
+        <em>by</em>
+        <em data-ng-bind="course.creator.fullName"></em>
+    </small>
+</section>

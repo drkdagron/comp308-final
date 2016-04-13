@@ -1,0 +1,24 @@
+<section data-ng-controller="CourseController" data-ng-init="find()">
+
+    <h2>Courses</h2>
+    <br>
+
+    <div data-ng-repeat="course in courses" class="container" style="position:relative;left:20px">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Course Name: <strong data-ng-bind="course.name"></strong></h5>
+                <h5>Course Code: <strong data-ng-bind="course.code"></strong></h5>
+                <h5>Description: <strong data-ng-bind="course.description"></strong></h5>
+            </div>
+            <div class="col-md-4">
+                  <a data-ng-href="/#!/courses/{{course._id}}"><button class="btn btn-block btn-primary"><strong>View</strong></button></a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div data-ng-hide="!courses || courses.length">
+        No courses yet, why don't you <a href="/#!/courses/create">create one?</a>
+    </div>
+
+</section>

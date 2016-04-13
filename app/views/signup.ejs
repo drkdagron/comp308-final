@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%=title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="myApp.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Comp308 - Project</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" style="height: 1px;">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/signin">Signin</a></li>
+                        <li class="active"><a href="/signup">Signup</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+
+    <div style="height:100px;"> </div>
+
+    <% for(var i in messages) { %>
+        <div class="flash">
+            <%= messages[i] %>
+        </div>
+        <% } %>
+            <br>
+            <div class="container container-table">
+                <div class="row vertical-center-row">
+                    <div class="text-center col-md-4 col-md-offset-4">
+                        <form action="/signup" method="post">
+                            <div class="input-group input-group-lg" style="margin-bottom:10px">
+                                <span class="input-group-addon" id="sizing-addon1"></span>
+                                <input type="text" name="username" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+                            </div>
+                            <div class="input-group input-group-lg" style="margin-bottom:10px">
+                                <span class="input-group-addon" id="sizing-addon1"></span>
+                                <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+                            </div>
+                            <div class="input-group input-group-lg" style="margin-bottom:10px">
+                                <span class="input-group-addon" id="sizing-addon1"></span>
+                                <input type="text" name="firstName" class="form-control" placeholder="First Name" aria-describedby="sizing-addon1">
+                            </div>
+                            <div class="input-group input-group-lg" style="margin-bottom:10px">
+                                <span class="input-group-addon" id="sizing-addon1"></span>
+                                <input type="text" name="lastName" class="form-control" placeholder="Last Name" aria-describedby="sizing-addon1">
+                            </div>
+                            <div class="input-group input-group-lg" style="margin-left:auto;margin-right:auto;margin-bottom:10px">
+                            <select class="form-control" name="type" id="sel1" aria-describedby="sizing-addon1">
+                                <option>Student</option>
+                                <option>Staff</option>
+                            </select>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-lg" value="Sign up" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <hr>
+</body>
+
+</html>
