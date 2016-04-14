@@ -1,4 +1,4 @@
-<section data-ng-controller="CourseController" data-ng-init="findOneEnroll();FindOneCourse();">
+<section data-ng-controller="CourseController" data-ng-init="findOneEnroll();">
     <div class="container">
         <h1><strong>Enroll information</strong></h1>
         <div data-ng-show="authentication.user._id == enroll.creator._id">
@@ -9,8 +9,8 @@
             <a data-ng-click="enroll();"><button class="btn btn-success"><strong>Enroll</strong></button></a>
         </div>
         <div style="margin-left:10px">
-            <h3>Course Name: <strong data-ng-bind="enroll.student._id"></strong></h3>
-            <h3>Course Code: <strong data-ng-bind="enroll.course.name"></strong></h3>
+            <h3>Course Name: <strong data-ng-bind="enroll.courseName"></strong></h3>
+            <h3>Course Code: <strong data-ng-bind="enroll.courseCode"></strong></h3>
         </div>
     </ul>
     </div>

@@ -28,8 +28,6 @@ function ($scope, $routeParams, $location, Authentication, Courses, Enroll) {
         $scope.course = Courses.get({
             courseId: $routeParams.courseId
         });
-        $scope.enroll = Enroll.get({});
-        console.log("Enrolled: " + $scope.enroll);
     };
     
     $scope.findStudents = function() {
@@ -56,8 +54,8 @@ function ($scope, $routeParams, $location, Authentication, Courses, Enroll) {
     {
         console.log("ENROLLING:");
         var enroll = new Enroll({
-            courseName: $scope.course.courseName,
-            courseCode: $scope.course.courseCode,
+            courseName: $scope.course.name,
+            courseCode: $scope.course.code,
 
         });
         enroll.$save(function(response) {

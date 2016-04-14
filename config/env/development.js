@@ -1,5 +1,5 @@
 module.exports = {
     //Development 
-    db: 'mongodb://localhost/stephen1myself2',
+    db: 'mongodb://localhost/Karstewen',
     sessionSecret: 'developmentSessionSecret' ,
 };

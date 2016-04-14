@@ -31,7 +31,7 @@ exports.create = function(req,res){
 
 exports.enroll = function(req, res){
     var enroll = new Enroll(req.body);
-    enroll.student = req.user;
+    enroll.studentId = req.user;
     
     enroll.save(function(err){
         if(err){
