@@ -135,6 +135,20 @@ exports.delete = function(req,res){
     });
 };
 
+exports.deleteEnroll = function(req,res){
+    var enroll = req.enroll;
+    
+    enroll.remove(function(err){
+        if(err){
+            return res.status(400).send({
+                message: getErrorMessage(err)
+            });
+        }else{
+            return res.json(enroll);
+        }
+    });
+};
+
 exports.hasAuthorization = function(req,res,next){
     if(req.course.creator.id !== req.user.id){
         return res.status(403).send({

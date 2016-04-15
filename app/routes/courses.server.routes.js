@@ -16,7 +16,8 @@ module.exports = function(app){
         .post(users.requiresLogin, courses.enroll);
     
     app.route('/api/enrolled/:enrollId')
-        .get(courses.readEnroll);
+        .get(courses.readEnroll)
+        .delete(users.requiresLogin, courses.deleteEnroll);
     
     app.param('courseId', courses.courseByID);
     app.param('enrollId', courses.enrollByID);

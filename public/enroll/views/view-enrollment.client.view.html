@@ -6,7 +6,7 @@
             <a data-ng-click="delete();"><button class="btn btn-danger">Delete</button></a>
         </div>
         <div data-ng-show="authentication.user.type == 'Student'">
-            <a data-ng-click="enroll();"><button class="btn btn-success"><strong>Enroll</strong></button></a>
+            <a data-ng-click="deleteEnroll();"><button class="btn btn-danger"><strong>Drop</strong></button></a>
         </div>
         <div style="margin-left:10px">
             <h3>Course Name: <strong data-ng-bind="enroll.courseName"></strong></h3>

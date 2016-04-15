@@ -83,4 +83,21 @@ function ($scope, $routeParams, $location, Authentication, Courses, Enroll) {
         }
     };
     
+    $scope.deleteEnroll = function(enroll) {
+        console.log('DELETING ENROLL');
+        if (enroll) {
+            enroll.$remove(function() {
+                for (var i in $scope.enrolls) {
+                    if ($scope.enrolls[i] === enroll) {
+                        $scope.enrolls.splice(i, 1);
+                    }
+                }
+            });
+        } else {
+            $scope.enroll.$remove (function() {
+                $location.path('enrolled/');
+            });
+        }
+    };
+    
 }]);

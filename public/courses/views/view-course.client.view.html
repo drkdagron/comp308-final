@@ -1,4 +1,4 @@
-<section data-ng-controller="CourseController" data-ng-init="findOne()">
+<section data-ng-controller="CourseController" data-ng-init="findOne();">
     <div class="container">
         <h1><strong>Course information</strong></h1>
         <div data-ng-show="authentication.user._id == course.creator._id">
@@ -14,7 +14,11 @@
             <h3>Description: <strong data-ng-bind="course.description"></strong></h3>
             <h3>Teacher: <strong data-ng-bind="course.creator.fullName"></strong></h3>
         </div>
-        <div><strong data-ng-bind="test"></strong></div>
+        <br>
+        <div data-ng-show="authentication.user._id == course.creator._id">
+            <h1><strong>Student details</strong></h1>
+            <strong data-ng-bind=""></strong>
+        </div>
     </ul>
     </div>
    <br>

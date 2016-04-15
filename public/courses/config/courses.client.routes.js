@@ -20,6 +20,9 @@ angular.module('courses').config(['$routeProvider', function($routeProvider) {
     }).
     when('/enrolled', {
        templateUrl: 'enroll/views/list-enrolled.client.view.html' 
+    }).
+    when('/transcript', {
+        templateUrl: 'enroll/views/view-transcript.client.view.html'
     });
 }
 ]);

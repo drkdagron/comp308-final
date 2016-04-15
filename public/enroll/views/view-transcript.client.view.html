@@ -1,16 +1,14 @@
 <section data-ng-controller="CourseController" data-ng-init="findEnrolled()">
 
-    <h2>Courses</h2>
+    <h2>Transcript</h2>
     <br>
 
     <div data-ng-show="authentication.user._id == course.studentId" data-ng-repeat="course in enrolls" class="container" style="position:relative;left:20px">
         <div class="row">
             <div class="col-md-6">
-                <h5>Course Name: <strong data-ng-bind="course.courseName"></strong></h5>
-                <h5>Course Code: <strong data-ng-bind="course.courseCode"></strong></h5>
-            </div>
-            <div class="col-md-4">
-                  <a data-ng-href="/#!/enrolled/{{course._id}}"><button class="btn btn-block btn-primary"><strong>View</strong></button></a>
+                <h3>Course Name: <strong data-ng-bind="course.courseName"></strong></h3>
+                <h3>Course Code: <strong data-ng-bind="course.courseCode"></strong></h3>
+                <h3>Grade: <strong data-ng-bind="course.grade"></strong></h3>
             </div>
         </div>
         <hr>

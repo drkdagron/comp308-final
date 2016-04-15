@@ -6,6 +6,9 @@
         </div>
         <div data-ng-show="!authentication.user">
             <h1 style="font-size:30px;">Please sign in/sign up to begin!</h1>
+            <a href="/signin"><input type="button" class="btn btn-primary btn-lg" value="Sign in" /></a>
+            <a href="/signup"><input type="button" class="btn btn-primary btn-lg" value="Sign up" /></a>
+
         </div>
     </div>
         
@@ -14,8 +17,8 @@
             <div class="rows">
                 <div class="col-md-4">
                     <a data-ng-href="/#!/courses"><button class="btn btn-primary btn-block"  style="margin-bottom:10px" >View Courses Offered</button></a>
-                    <a data-ng-href="/#!/enrolled"><button class="btn btn-primary btn-block"  style="margin-bottom:10px">View Courses</button></a>
-                    <button class="btn btn-primary btn-block" href="#" style="margin-bottom:10px">View Transcript</button>
+                    <a data-ng-href="/#!/enrolled"><button class="btn btn-primary btn-block"  style="margin-bottom:10px">View Enrolled Courses</button></a>
+                    <a data-ng-href="/#!/transcript"><button class="btn btn-primary btn-block" style="margin-bottom:10px">View Transcript</button></a>
                 </div>
                 <div class="col-md-8"></div>
             </div>
